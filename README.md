@@ -27,4 +27,4 @@ This repository uses a monorepo structure:
 - `docker-compose.yml`: Database & pgAdmin orchestration.
 
 ## Getting Started
-(soon..)
+(soon...)
