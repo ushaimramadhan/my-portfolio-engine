@@ -9,7 +9,7 @@ const projectRoutes = require('./routes/projectRoutes');
 
 //Middleware
 app.use(cors());
-app.use(express.json()); //Supaya bisa baca JSON dari body request
+app.use(express.json());
 
 //Routes
 app.get('/', (req, res) => {
