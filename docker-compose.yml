@@ -11,9 +11,9 @@ services:
       POSTGRES_PASSWORD: mypassword123
       POSTGRES_DB: portfolio_db
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
-      # Volume ini penting agar data tidak hilang saat container dimatikan
+      # Volume ini penting agar tidak hilang saat container dimatikan
       - postgres_data:/var/lib/postgresql/data
 
   # Service 2: pgAdmin (Interface Web untuk Kelola Database)
