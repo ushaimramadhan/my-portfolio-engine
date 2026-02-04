@@ -6,6 +6,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 const projectRoutes = require('./routes/projectRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 //Middleware
 app.use(cors());
@@ -16,6 +17,7 @@ app.get('/', (req, res) => {
   res.send('API Portfolio Engine is Running!');
 });
 
+app.use('/api/auth', authRoutes);
 app.use('/api/projects', projectRoutes);
 
 app.listen(PORT, () => {
