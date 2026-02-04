@@ -22,7 +22,7 @@ const verifyToken = (req, res, next) => {
     // Lanjut ke controller
     next();
   } catch (error) {
-    return res.status(403).json({ message: 'Token tidak valid!'})
+    return res.status(403).json({ message: 'Token tidak valid!'});
   }
 };
 
