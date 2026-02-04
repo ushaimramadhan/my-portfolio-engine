@@ -6,7 +6,7 @@ const UserModel = {
   findByEmail: async (email) => {
     const query = 'SELECT * FROM users WHERE email = $1';
     const result = await db.query(query, [email]);
-    return result.row[0];
+    return result.rows[0];
   },
 
   // Buat user baru (Password otomatis di-hash disini)
@@ -22,7 +22,7 @@ const UserModel = {
       RETURNING id, email, created_at
     `;
     const result = await db.query(query, [email, hashedPassword]);
-    return result.row[0];
+    return result.rows[0];
   }
 };
 
